@@ -4,6 +4,7 @@ import org.junit.Test;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import spring.IoC.Book;
 import spring.IoC.User;
 
 
@@ -18,6 +19,14 @@ public class TestSpring5 {
         User user = context.getBean("user1", User.class);
         System.out.println(user);
         user.add();
+    }
+
+    @Test
+    public void TestBook(){
+        ApplicationContext context2 = new ClassPathXmlApplicationContext("bean1.xml");
+        Book book = context2.getBean("book",Book.class);
+        System.out.println(book);
+        book.scan();
     }
 
 }
