@@ -14,7 +14,7 @@ public class Book {
         this.bName = bName;
     }
 
-
+//set加配置文件注入属性
 
     public void scan(){
         System.out.println(bName);

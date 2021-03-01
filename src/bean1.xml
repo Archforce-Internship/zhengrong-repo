@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:p="http://www.springframework.org/schema/p" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
 <!--bean id = "user1" class="spring.IoC.User"></bean>-->
-    <!--bean id="book" class="spring.IoC.Book">
+    <bean id="book" class="spring.IoC.Book" p:bName="think in java">
+<!--        <property name="bName" value="think in java"></property>-->
 
-        <!- name="bName" value="think in java"></-->
-        <bean id="Orders" class="spring.IoC.Orders">
-            <constructor-arg name="OName" value="abc"></constructor-arg>
-            <constructor-arg name="address" value="123"></constructor-arg>
+        </bean>
+<!--        <bean id="Orders" class="spring.IoC.Orders">-->
+<!--            <constructor-arg name="OName" value="abc"></constructor-arg>-->
+<!--            <constructor-arg name="address" value="123"></constructor-arg>-->
 
-    </bean>
+<!--    </bean>-->
 
 </beans>

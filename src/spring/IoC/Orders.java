@@ -17,3 +17,4 @@ public class Orders {
         System.out.println((OName) + (address));
     }
 }
+//有参构造加配置文件
