@@ -9,6 +9,7 @@ public class user {
         used use1 = usedFactory.createUsed();
         use1.add();
     }
+
 }
 
 class used{
