@@ -6,6 +6,14 @@ package spring.IoC;
  */
 public class Orders {
 
+    private String OName;
+    private String address;
+    public Orders(String OName,String address){
+        this.OName = OName;
+        this.address = address;
+    }
 
-
+    public void sendO(){
+        System.out.println((OName) + (address));
+    }
 }

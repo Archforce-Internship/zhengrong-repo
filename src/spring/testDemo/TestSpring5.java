@@ -5,6 +5,7 @@ import org.springframework.beans.factory.BeanFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import spring.IoC.Book;
+import spring.IoC.Orders;
 import spring.IoC.User;
 
 
@@ -29,4 +30,11 @@ public class TestSpring5 {
         book.scan();
     }
 
+    @Test
+    public void TestOrders(){
+        ApplicationContext context3 = new ClassPathXmlApplicationContext("bean1.xml");
+        Orders orders = context3.getBean("Orders", Orders.class);
+        System.out.println(orders);
+        orders.sendO();
+    }
 }
