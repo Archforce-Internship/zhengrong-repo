@@ -1,5 +1,6 @@
 package collectionType.TestType;
 
+import collectionType.Book;
 import collectionType.Stu;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
@@ -15,5 +16,11 @@ public class Test1 {
         ApplicationContext context = new ClassPathXmlApplicationContext("bean3.xml");
         Stu stu = context.getBean("stu", Stu.class);
         stu.test();
+    }
+    @Test
+    public void TestBook() {
+        ApplicationContext context = new ClassPathXmlApplicationContext("beanForPublic.xml");
+        Book book = context.getBean("Book", Book.class);
+        book.ou();
     }
 }
