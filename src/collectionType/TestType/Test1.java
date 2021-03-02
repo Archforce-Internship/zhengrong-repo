@@ -1,7 +1,9 @@
 package collectionType.TestType;
 
 import collectionType.Book;
+import collectionType.FactoryBean.MyBean;
 import collectionType.Stu;
+import collectionType.courses;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -22,5 +24,12 @@ public class Test1 {
         ApplicationContext context = new ClassPathXmlApplicationContext("beanForPublic.xml");
         Book book = context.getBean("Book", Book.class);
         book.ou();
+    }
+
+    @Test
+    public void TestFBean() {
+        ApplicationContext context = new ClassPathXmlApplicationContext("beanForFactory.xml");
+        courses courses = context.getBean("myBean", courses.class);
+        System.out.println(courses);
     }
 }

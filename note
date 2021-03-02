@@ -12,3 +12,5 @@ DI：依赖注入，注入属性
     有参构造注入
 
 2021.3.1 spring5框架 p11
+
+map:<entry key ="" value = "">
