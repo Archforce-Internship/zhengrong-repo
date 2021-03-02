@@ -1,5 +1,6 @@
 package bean;
 
+import autoWrite.Emp;
 import org.junit.Test;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -16,4 +17,11 @@ public class TestAlive {
             System.out.println(orders1);
         context.close();
         }
+
+    @Test
+    public void TestAuto(){
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("BeanForAuto.xml");
+        Emp emp = context.getBean("emp", Emp.class);
+        System.out.println(emp);
     }
+}
