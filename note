@@ -1,3 +1,4 @@
+spring核心思想:IOC,Di,AOP
 bean管理：
         1.spring创建对象
         2.spring注入属性
@@ -9,8 +10,20 @@ bean管理：
           name： 类似id，可以加符号，用得少
     默认使用无参数构造器创建对象
 DI：依赖注入，注入属性
-    有参构造注入
+    有参构造注入constructor-arg
+        属性注入公共化:
+           xmlns:util="http://www.springframework.org/schema/util"
+           xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                               http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
 
-2021.3.1 spring5框架 p11
+        <util:list id="bookList">
+            <value>think in java</value>
+            <value>think in kafka</value>
+            <value>think in hadoop</value>
+        </util:list>
+
+        <bean id="Book" class="collectionType.Book">
+        <property name="list" ref="bookList"></property>
+
 
 map:<entry key ="" value = "">
