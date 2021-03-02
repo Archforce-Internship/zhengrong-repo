@@ -23,7 +23,9 @@ public class Test1 {
     public void TestBook() {
         ApplicationContext context = new ClassPathXmlApplicationContext("beanForPublic.xml");
         Book book = context.getBean("Book", Book.class);
+        Book book2 = context.getBean("Book", Book.class);
         book.ou();
+        book2.ou();
     }
 
     @Test
