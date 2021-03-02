@@ -7,6 +7,9 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import spring.IoC.Book;
 import spring.IoC.Orders;
 import spring.IoC.User;
+import spring.demo.dao.UserDao;
+import spring.demo.dao.UserDaoImpl;
+import spring.demo.service.UserService;
 
 
 /**
@@ -36,5 +39,13 @@ public class TestSpring5 {
         Orders orders = context3.getBean("Orders", Orders.class);
         System.out.println(orders);
         orders.sendO();
+    }
+
+    @Test
+    public void TestBean(){
+        ApplicationContext context4 = new ClassPathXmlApplicationContext("bean2.xml");
+        UserService userService = context4.getBean("userService", UserService.class);
+        System.out.println(userService);
+        userService.add();
     }
 }
