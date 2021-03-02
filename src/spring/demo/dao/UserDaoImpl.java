@@ -6,8 +6,14 @@ package spring.demo.dao;
  */
 public class UserDaoImpl implements UserDao{
 
+    public int id;
+    public void setId(int id) {
+        this.id = id;
+    }
+
     @Override
     public void upData() {
         System.out.println("dao upData");
+        System.out.println(id);
     }
 }

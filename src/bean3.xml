@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean id="stu" class="collectionType.Stu">
+    <property name="courses">
+        <array>
+            <value>java class</value>
+            <value>math class</value>
+        </array>
+    </property>
+
+    <property name="list">
+        <list>
+        <value>张三</value>
+        <value>小三</value>
+        </list>
+    </property>
+    <property name="map">
+        <map>
+            <entry key="JAVA" value="java"></entry>
+            <entry key="MATH" value="math"></entry>
+        </map>
+    </property>
+    <property name="set">
+        <set>
+        <value>85</value>
+        <value>96</value>
+        </set>
+    </property>
+</bean>
+</beans>
