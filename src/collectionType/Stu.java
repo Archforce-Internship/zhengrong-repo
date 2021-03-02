@@ -10,11 +10,8 @@ public class Stu {
     private String[] courses;
 
     private List<String> list;
-
     private Map<String,String> map;
-
     private Set<String> set;
-
     public void setSet(Set<String> set) {
         this.set = set;
     }
