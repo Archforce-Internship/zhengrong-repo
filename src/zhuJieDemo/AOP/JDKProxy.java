@@ -11,7 +11,7 @@ import java.lang.reflect.Proxy;
 public class JDKProxy {
     public static void main(String[] args) {
         Class[] interfaces = {newDao.class};
-        newDaoImpl newDao = new newDaoImpl();
+        newDaoImpl newDao = new newDaoImpl();//
         newDao o = (newDao) Proxy.newProxyInstance(JDKProxy.class.getClassLoader(), interfaces, new newDaoProxy(newDao));
         int jg = o.add(1, 2);
         System.out.println("结果：" + jg);
