@@ -14,7 +14,7 @@ public class orders {
 
     public void setoName(String oName) {
         this.oName = oName;
-        System.out.println("调用set方法");
+        System.out.println("调用set方法" + oName);
     }
     public void init(){
         System.out.println("初始化方法");
