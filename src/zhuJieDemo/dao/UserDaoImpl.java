@@ -1,6 +1,7 @@
 package zhuJieDemo.dao;
 
 import org.springframework.stereotype.Repository;
+import spring.IoC.User;
 
 /**
  * @author 517
