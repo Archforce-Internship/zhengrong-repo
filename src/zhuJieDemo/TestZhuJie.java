@@ -2,7 +2,9 @@ package zhuJieDemo;
 
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import zhuJieDemo.config.springConf;
 import zhuJieDemo.service.UserService;
 
 /**
@@ -10,12 +12,20 @@ import zhuJieDemo.service.UserService;
  * @date 2021-03-03 - 9:32
  */
 public class TestZhuJie {
+//    @Test
+//    public void TestUserService() {
+//        ApplicationContext context = new ClassPathXmlApplicationContext("scannerZuJian.xml");
+//        UserService userService = context.getBean("userService", UserService.class);
+//        userService.add();
+//    }
+
     @Test
-    public void TestUserService() {
-        ApplicationContext context = new ClassPathXmlApplicationContext("scannerZuJian.xml");
+    public void TestUserServiceInConf() {
+        ApplicationContext context = new AnnotationConfigApplicationContext(springConf.class);//加载配置类
         UserService userService = context.getBean("userService", UserService.class);
         userService.add();
     }
+
 
 
 }
