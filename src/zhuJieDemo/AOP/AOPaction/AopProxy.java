@@ -2,6 +2,7 @@ package zhuJieDemo.AOP.AOPaction;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 import sun.reflect.generics.tree.VoidDescriptor;
 
@@ -11,6 +12,8 @@ import sun.reflect.generics.tree.VoidDescriptor;
  */
 @Component
 @Aspect
+
+//@Order(1) 值越小优先级越高
 public class AopProxy {
 
     @Pointcut(value = "execution(* zhuJieDemo.AOP.AOPaction.Aop.add(..))")
