@@ -21,8 +21,8 @@ public class JDKProxy {
 //代理对象代码
 class newDaoProxy implements InvocationHandler{
 
-    public Object obj;
-    public newDaoProxy (Object obj){
+    public newDaoImpl obj;
+    public newDaoProxy (newDaoImpl obj){
         this.obj = obj;
     }
     @Override
